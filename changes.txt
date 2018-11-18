@@ -14,3 +14,18 @@
 	
 	*** Allagi sto arxeio users => show.html.haml
 	>>> eisagwgi tis grammis "= photo.title"
+
+
+======= Erotima dio
+
+	*** Dimiourgia tou neo model
+	>>> rails generate model Follow
+
+	*** Tropoihsou tou file db/migrate/#$#$#$@@$@_create_follows.rb
+
+	*** Allagi sto app/models/user.rb
+	>>> Add line 30 - 48
+
+
+	*** Simplirosi code gia to file app/models/follow.rb
+	

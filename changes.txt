@@ -1,0 +1,4 @@
+Gia tin eisagogi tou title ston pinaka photos
+>>> rails generate migration add_title_to_photos title:string
+>>> rake db:migrate
+

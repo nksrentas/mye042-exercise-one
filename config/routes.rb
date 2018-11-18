@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   post '/log-in' => "sessions#create"
   get '/log-out' => "sessions#destroy", as: :log_out
 
+  resources :follows, only: [:create, :destroy]
+
 end

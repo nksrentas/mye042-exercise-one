@@ -28,4 +28,14 @@
 
 
 	*** Simplirosi code gia to file app/models/follow.rb
+
+	*** rails generate controller Follows
+
+	*** Simplirosi code gia to file app/controllers/follows_controller.rb
+
+	*** Ananeosi tou routes.rb
+	>>> Line 12
+
+	*** Allagi sto arxeio views/user/show.html.haml
+	>>> Lines 20 -29
 	

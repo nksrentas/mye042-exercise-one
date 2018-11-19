@@ -47,4 +47,5 @@ class User<ActiveRecord::Base
     following.include?(other)
   end
   
+  has_many :comments
 end

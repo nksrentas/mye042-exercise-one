@@ -40,3 +40,9 @@
 	*** Allagi sto arxeio views/user/show.html.haml
 	>>> Lines 20 -29
 	
+
+======= Erotima tria
+
+	*** rails generate model Comment context:text photo:references user:references
+
+	*** rails generate controller comments

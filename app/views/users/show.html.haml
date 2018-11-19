@@ -28,26 +28,18 @@
         - else
           = button_to "Follow", follows_path(current_user: @user, user_id: user.id), :class => "btn btn-primary"
 .row
-  / - @my_users.each do |my|
-  /   %h3
-  /     = my.email
-  /   - my.photos.each  do |photo|
-  /     .well.col-sm-4
-  /       %h3
-  /         = photo.title
-  /       = image_tag photo.image.url(:medium)
-  /       = form_for @tag do |f|
-  /         = f.hidden_field :photo_id, value: photo.id
-  /         = f.collection_select :user_id, @users, :id, :email
-  /         = f.submit "Tag User"
-  /       - photo.tags.each do |tag|
-  /         = tag.user.email
   - @final_photos.each do |photo|
     .well.col-sm-4
       %h3
         = photo.title
       = image_tag photo.image.url(:medium)
       = button_to "Add comment", new_user_photo_comment_path(photo_id: photo.id, user_id: photo.user_id), method: :get, :class => "btn btn-primary"
+      %p
+        - photo.comments.each do |c|
+          %p
+            %span.badge.badge-secondary
+              user id: #{c.user_id}
+            = c.context
       = form_for @tag do |f|
         = f.hidden_field :photo_id, value: photo.id
         = f.collection_select :user_id, @users, :id, :email

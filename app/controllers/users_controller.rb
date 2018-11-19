@@ -36,6 +36,12 @@ class UsersController < ApplicationController
     end
     @my_users.push(@user)
     @final_photos = @my_photos.flatten
+
+    # @my_comments = []
+    # @final_photos.each do |f|
+    #   @my_comments.push(f.comments)
+    # end
+
     Photo.order(created_at: :desc)
     # Pernw oles tis photo
     #@my_photos = Photo.order(created_at: :desc).all

@@ -24,14 +24,22 @@ class UsersController < ApplicationController
   def show
     @users = User.all
     @user = User.find(params[:id])
-    #hoto.order('created_at ASC')
+    
+    # Pernw olous tou followers tou
     @my_users = []
+    @my_photos = []
     @users.each do |u|
       if @user.following?(u)
         @my_users.push(u)
+        @my_photos.push(u.photos) 
       end
     end
     @my_users.push(@user)
+    @final_photos = @my_photos.flatten
+    Photo.order(created_at: :desc)
+    # Pernw oles tis photo
+    #@my_photos = Photo.order(created_at: :desc).all
+ 
 
     @tag = Tag.new
   end

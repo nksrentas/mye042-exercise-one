@@ -35,6 +35,7 @@ class UsersController < ApplicationController
       end
     end
     @my_users.push(@user)
+    @my_photos.push(@user.photos)
     @final_photos = @my_photos.flatten
 
     # @my_comments = []

@@ -24,6 +24,15 @@ class UsersController < ApplicationController
   def show
     @users = User.all
     @user = User.find(params[:id])
+    #hoto.order('created_at ASC')
+    @my_users = []
+    @users.each do |u|
+      if @user.following?(u)
+        @my_users.push(u)
+      end
+    end
+    @my_users.push(@user)
+
     @tag = Tag.new
   end
 

@@ -13,7 +13,8 @@
 	>>> simplirosi epipleon arguments (:title) stin method permit "params.require(:photo).permit(:image, :title)"
 	
 	*** Allagi sto arxeio users => show.html.haml
-	>>> eisagwgi tis grammis "= photo.title"
+	>>> eisagwgi tis grammis "%h3
+        						= photo.title"
 
 
 ======= Erotima dio

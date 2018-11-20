@@ -31,11 +31,11 @@ class UsersController < ApplicationController
     @users.each do |u|
       if @user.following?(u)
         @my_users.push(u)
-        @my_photos.push(u.photos) 
+        @my_photos.push(u.photos.order('created_at DESC')) 
       end
     end
     @my_users.push(@user)
-    @my_photos.push(@user.photos)
+    @my_photos.push(@user.photos.order('created_at DESC'))
     @final_photos = @my_photos.flatten
 
     # @my_comments = []

@@ -5,11 +5,11 @@ gem 'sqlite3'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.3.4'
 gem 'turbolinks'
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
 gem "paperclip", "~> 4.2"
-gem 'bootstrap-sass', '~> 3.3.4'
+gem 'bootstrap-sass', '~> 3.4.0'
 gem 'haml'
 
 

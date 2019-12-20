@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails'
+gem 'rails', '>= 4.2.10'
 gem 'sqlite3'
-gem 'sass-rails'
+gem 'sass-rails', '>= 5.0.7'
 gem 'uglifier'
-gem 'coffee-rails'
-gem 'jquery-rails'
+gem 'coffee-rails', '>= 4.2.2'
+gem 'jquery-rails', '>= 4.3.3'
 gem 'turbolinks'
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
 gem "paperclip", "~> 4.2"
@@ -15,17 +15,17 @@ gem 'haml'
 
 group :development do
   gem 'byebug'
-  gem 'web-console'
+  gem 'web-console', '>= 3.3.0'
   gem 'spring'
-  gem 'quiet_assets'
+  gem 'quiet_assets', '>= 1.1.0'
 end
 
 group :test, :development do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 3.8.1'
   gem 'pry'
 end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'capybara'
+  gem 'capybara', '>= 3.10.1'
 end

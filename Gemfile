@@ -27,5 +27,5 @@ end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'capybara'
+  gem 'capybara', '>= 3.10.1'
 end

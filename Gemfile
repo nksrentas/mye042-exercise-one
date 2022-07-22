@@ -8,7 +8,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
-gem "paperclip", "~> 4.2"
+gem "paperclip", "~> 4.3", ">= 4.3.7"
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'haml'
 
